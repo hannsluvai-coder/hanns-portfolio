@@ -1,0 +1,12 @@
+fetch('https://api.github.com/user/repos', {
+  method: 'POST',
+  headers: {
+    'Authorization': 'token YOUR_GITHUB_PERSONAL_ACCESS_TOKEN',
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    name: "hanns-luvai-portfolio",
+    description: "Professional Land Surveyor Portfolio",
+    private: false
+  })
+}).then(res => res.json()).then(console.log)
